@@ -1,0 +1,103 @@
+{
+  "version": 2,
+  "name": "ELEGOO NEPTUNE",
+  "inherits": "fdmprinter",
+  "metadata": {
+    "visible": true,
+    "author": "ELEGOO",
+    "manufacturer": "ELEGOO",
+    "category": "ELEGOO",
+    "file_formats": "text/x-gcode",
+    "icon": "wanhao-icon.png",
+    "has_materials": true,
+    "machine_extruder_trains": {
+      "0": "custom_extruder_1",
+      "1": "custom_extruder_2"
+    },
+    "platform_offset": [
+      0,
+      -28,
+      5
+    ]
+  },
+  "overrides": {
+    "machine_name": {
+      "default_value": "ELEGOO NEPTUNE"
+    },
+    "machine_width": {
+      "default_value": 210
+    },
+    "machine_height": {
+      "default_value": 200
+    },
+    "machine_depth": {
+      "default_value": 210
+    },
+    "layer_height":{
+      "default_value": 0.2
+    },
+    "wall_thickness":{
+      "default_value": 1.2
+    },
+    "wall_line_count":{
+      "default_value": 3
+    },
+    "top_bottom_thickness":{
+      "default_value": 1.2
+    },
+    "top_thickness":{
+      "default_value": 1.2
+    },
+    "bottom_thickness":{
+      "default_value": 1.2
+    },
+    "infill_sparse_density":{
+      "default_value": 15
+    },
+    "machine_heated_bed": {
+      "default_value": true
+    },
+    "speed_print":{
+      "default_value": 50
+    },
+    "material_print_temperature":{
+      "default_value": 205
+    },
+    "material_bed_temperature":{
+      "default_value": 50
+    },
+    "retraction_amount":{
+      "default_value": 7
+    },
+    "retraction_speed":{
+      "default_value": 70
+    },
+    "adhesion_type":{
+      "default_value": "skirt"
+    },
+    "raft_margin":{
+      "default_value": 5
+    },
+    "raft_airgap":{
+    	"default_value": 0.25
+    },
+    "brim_width":{
+      "default_value": 5
+    },
+    "retraction_hop_enabled":{
+      "default_value": false
+    },
+    "support_infill_rate":{
+    	"default_value": 15
+    },
+    "machine_gcode_flavor": {
+      "default_value": "RepRap (Marlin/Sprinter)"
+    },
+    "machine_start_gcode": {
+      "default_value": "G28 ;home\nG1 Z15.0 F6000 ;Move the platform down 15 mm\n;Prime the extruder\nG92 E0\nG1 F200 E3\nG92 E0"
+    },
+    "machine_end_gcode": {
+      "default_value": ";Retract the filament\nG92 E1\nG1 E-1 F300\nG28 X0 Y0\nM84"
+    }
+  }
+}
